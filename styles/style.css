@@ -27,6 +27,10 @@ a {
   color: inherit;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
 .container {
   max-width: 1000px;
   margin: auto;
@@ -175,6 +179,100 @@ header .card_group .card small {
   font-size: 0.8rem;
   text-wrap: nowrap;
   color: var(--text-lightgray);
+}
+
+#offer_section {
+  padding: 70px 0;
+}
+
+#offer_section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-dark);
+}
+
+.offer_cards {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 25px;
+  padding: 0 15px;
+}
+
+.offer_cards .offer_card {
+  display: flex;
+  flex: 1;
+  border-radius: 20px;
+  padding: 0 30px;
+  position: relative;
+}
+
+.offer_card .discount {
+  flex: 2;
+}
+
+.offer_card .coupon_code {
+  flex: 1;
+}
+
+.offer_cards .offer_card:nth-child(1) {
+  background: #ffbf0f;
+}
+
+.offer_cards .offer_card:nth-child(2) {
+  background: #f78c9c;
+}
+
+.offer_cards .offer_card h3 {
+  color: var(--text-dark);
+  font-size: 1.5rem;
+}
+.offer_cards .offer_card p {
+  color: var(--text-gray);
+  margin-right: 5px;
+}
+.offer_cards .offer_card small {
+  color: var(--text-lightgray);
+  font-size: 0.7rem;
+}
+
+.offer_cards .offer_card .divider {
+  position: absolute;
+  height: 100%;
+  right: 37%;
+  top: 0;
+}
+
+.offer_cards .offer_card .divider img {
+  height: 100%;
+}
+
+.offer_cards .offer_card .discount,
+.offer_cards .offer_card .coupon_code {
+  padding: 30px 0;
+}
+
+.offer_button {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.offer_button button {
+  background: white;
+  border: 1px solid var(--primary);
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+@media only screen and (max-width: 800px) {
+  .offer_cards {
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+  }
 }
 
 @media only screen and (max-width: 768px) {
