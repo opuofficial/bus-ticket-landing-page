@@ -1,0 +1,249 @@
+:root {
+  --primary: #1dd100;
+  --primary-light: #e8fae6;
+  --text-dark: #030712;
+  --text-gray: #4f5159;
+  --text-lightgray: #676a70;
+  --bg-lightgray: #f7f8f8;
+  --bg-mediumgray: #ebeced;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-gray);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  /* padding: 0 15px; */
+  /* border: 1px solid black; */
+}
+
+header {
+  padding: 0 15px;
+}
+
+nav {
+  padding: 20px 0;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.branding {
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 1.2rem;
+}
+
+.nav_links {
+  display: flex;
+  gap: 25px;
+  font-size: 0.85rem;
+}
+
+nav .bars_icon {
+  display: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+}
+
+nav button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--primary);
+  font-weight: 700;
+  border: 1px solid var(--primary);
+  background: var(--primary-light);
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+nav button img {
+  width: 20px;
+}
+
+.banner_section {
+  text-align: center;
+  min-height: 450px;
+  place-content: center;
+  background: url("../images/banner.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner_section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #00000085;
+}
+
+.banner_section .banner_content {
+  z-index: 11;
+  position: relative;
+  padding: 0 10px;
+}
+
+.banner_section h1 {
+  font-size: 2.3rem;
+}
+
+.banner_section h1 span:first-child {
+  color: white;
+}
+
+.banner_section span:nth-child(2) {
+  display: block;
+  color: var(--primary);
+}
+
+.banner_section small {
+  width: 60%;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  color: #c9c9c9;
+}
+
+.banner_section button {
+  background: var(--primary);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+header .card_group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  position: relative;
+  bottom: 50%;
+  transform: translateY(-50%);
+}
+
+header .card_group .card {
+  border-bottom: 3px solid lightgreen;
+  border-radius: 10px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background: white;
+  padding: 15px 30px;
+}
+
+header .card_group .card img {
+  width: 40px;
+}
+
+header .card_group .card h3 {
+  font-size: 1.3rem;
+  color: var(--text-gray);
+}
+
+header .card_group .card small {
+  font-size: 0.8rem;
+  text-wrap: nowrap;
+  color: var(--text-lightgray);
+}
+
+@media only screen and (max-width: 768px) {
+  nav .bars_icon {
+    display: block;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  nav .nav_links {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background: white;
+    z-index: 111;
+  }
+
+  header .card_group .card small {
+    display: none;
+  }
+
+  header .card_group .card {
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  header .card_group .card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .banner_section h1 {
+    font-size: 2.1rem;
+  }
+
+  .banner_section small {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header .card_group .card {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  header .card_group .card img {
+    width: 30px;
+  }
+
+  header .card_group .card h3 {
+    font-size: 1.05rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .banner_section span:nth-child(2) {
+    display: inline-block;
+  }
+
+  .banner_section small {
+    width: 90%;
+  }
+}
