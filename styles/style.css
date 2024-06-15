@@ -402,6 +402,7 @@ main .info_section .info .bus_info .info_three div {
 
   main .info_section {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .info_section .heading_section,
@@ -448,6 +449,14 @@ main .info_section .info .bus_info .info_three div {
 
   .heading img {
     width: 50px;
+  }
+
+  main .info_section .info .bus_info {
+    padding: 20px;
+  }
+
+  main .info_section .info {
+    padding: 20px;
   }
 }
 
