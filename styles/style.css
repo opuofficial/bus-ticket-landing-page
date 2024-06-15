@@ -183,6 +183,7 @@ header .card_group .card small {
 
 #offer_section {
   padding: 70px 0;
+  margin-bottom: 50px;
 }
 
 #offer_section h2 {
@@ -267,11 +268,186 @@ header .card_group .card small {
   color: var(--primary);
 }
 
+main {
+  padding: 0 15px;
+}
+
+main .container {
+  background: var(--bg-lightgray);
+  padding: 50px 15px;
+  border-top: 3px solid var(--primary);
+  border-radius: 20px;
+}
+
+main .container h2 {
+  text-align: center;
+  color: var(--text-dark);
+}
+
+main .container p {
+  text-align: center;
+  max-width: 70%;
+  margin: auto;
+}
+
+main .info_section {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+main .info_section .info {
+  flex: 4;
+  padding: 30px;
+  position: relative;
+}
+
+main .info_section .info .info_divider {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+main .info_section .info .info_divider img {
+  height: 100%;
+}
+
+main .info_section .fare {
+  padding: 30px;
+  flex: 1;
+  text-align: center;
+}
+
+main .info_section .fare h3 {
+  color: var(--text-dark);
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.info_section .heading_section {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 50px;
+  margin-bottom: 30px;
+}
+
+.info_section .heading_section .heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.info_section .heading_section .heading h3 {
+  font-size: 1.5rem;
+}
+
+.info_section .heading_section .heading small {
+  color: var(--text-lightgray);
+  font-size: 0.7rem;
+}
+
+.info_section .heading_section .seats_left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--primary);
+  font-weight: 700;
+  background: var(--primary-light);
+  padding: 5px 15px;
+  border-radius: 8px;
+}
+
+main .info_section .info .bus_info {
+  margin-right: 50px;
+  padding: 30px;
+  border-radius: 15px;
+  background: var(--bg-lightgray);
+}
+
+main .info_section .info .bus_info .info_one,
+main .info_section .info .bus_info .info_two {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px dashed lightgray;
+  padding: 15px 0;
+}
+
+main .info_section .info .bus_info .info_one span:nth-child(2),
+main .info_section .info .bus_info .info_two span:nth-child(2) {
+  font-weight: 700;
+}
+
+main .info_section .info .bus_info .info_three {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  margin-top: 15px;
+  font-weight: 700;
+}
+
+main .info_section .info .bus_info .info_three div {
+  background: var(--bg-mediumgray);
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 950px) {
+  main .info_section .info .info_divider {
+    display: none;
+  }
+
+  main .info_section {
+    flex-direction: column;
+  }
+
+  .info_section .heading_section,
+  main .info_section .info .bus_info {
+    margin-right: 0;
+  }
+
+  main .info_section .info .bus_info .info_three {
+    gap: 10px;
+  }
+
+  main .container p:nth-child(2) {
+    text-wrap: balance;
+    display: inline;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .offer_cards {
     flex-direction: column;
     max-width: 500px;
     margin: auto;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .info_section .heading_section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .info_section .heading_section .seats_left {
+    justify-content: center;
+  }
+
+  .info_section .heading_section .heading h3 {
+    font-size: 1.3rem;
+  }
+
+  main .info_section .info .bus_info .info_three {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .heading img {
+    width: 50px;
   }
 }
 
@@ -308,6 +484,11 @@ header .card_group .card small {
 
   header .card_group .card h3 {
     font-size: 1.1rem;
+  }
+
+  main .container p {
+    max-width: 85%;
+    font-size: 0.9rem;
   }
 }
 
