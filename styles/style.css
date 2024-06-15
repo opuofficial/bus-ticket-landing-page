@@ -396,6 +396,10 @@ main .info_section .info .bus_info .info_three div {
 }
 
 @media only screen and (max-width: 950px) {
+  main {
+    padding: 0;
+  }
+
   main .info_section .info .info_divider {
     display: none;
   }
