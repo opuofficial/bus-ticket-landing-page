@@ -274,7 +274,7 @@ main {
 
 main .container {
   background: var(--bg-lightgray);
-  padding: 50px 15px;
+  padding: 70px 15px;
   border-top: 3px solid var(--primary);
   border-radius: 20px;
 }
@@ -395,6 +395,222 @@ main .info_section .info .bus_info .info_three div {
   border-radius: 8px;
 }
 
+.main_section {
+  display: flex;
+  padding: 50px 30px;
+  background: white;
+  margin-top: 50px;
+  border-radius: 15px;
+}
+
+.main_section .bus_section {
+  flex: 1.5;
+  border-right: 2px dashed lightgray;
+  padding-right: 30px;
+}
+
+.main_section .calculation_section {
+  flex: 1;
+  /* border: 1px solid red; */
+  padding-left: 30px;
+}
+
+.main_section .bus_section h3 {
+  color: var(--text-dark);
+  font-size: 1.4rem;
+  border-bottom: 2px dashed lightgray;
+  padding: 15px 0;
+}
+
+.main_section .bus_section .info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px dashed lightgray;
+  padding: 15px 0;
+}
+
+.main_section .bus_section .info div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main_section .bus_section .info div:nth-child(2) span {
+  color: var(--primary);
+}
+
+.main_section .bus_section .bus {
+  margin-top: 30px;
+}
+
+.main_section .bus_section .bus .seat_row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_section .bus_section .bus .driver_seat {
+  display: flex;
+  justify-content: end;
+}
+
+.main_section .bus_section .bus .driver_seat .steering_wheel {
+  background: var(--bg-mediumgray);
+  width: 70px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+
+.main_section .bus_section .bus .driver_seat img {
+  width: 20px;
+}
+
+.main_section .bus_section .bus .seat_row .seat {
+  background: var(--bg-lightgray);
+  width: 70px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.main_section .bus_section .bus .seat_row .seat:nth-child(3) {
+  margin-right: 20px;
+}
+
+.main_section .calculation_section h3 {
+  color: var(--text-dark);
+  font-size: 1.4rem;
+  border-bottom: 2px dashed lightgray;
+  padding: 15px 0px;
+}
+
+.main_section .calculation_section .selected_seats_section {
+  background: var(--bg-lightgray);
+  margin: 15px 0 30px 0;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.main_section .calculation_section .selected_seats {
+  /* border: 1px solid red; */
+}
+
+.main_section .calculation_section .heading .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.main_section .calculation_section .heading .row span {
+  font-size: 0.7rem;
+  background: var(--primary);
+  color: white;
+  padding: 1px 3px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 5px;
+}
+
+.main_section .calculation_section .selected_seats {
+  border-bottom: 2px solid lightgray;
+}
+
+.main_section .calculation_section .selected_seats .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.main_section .calculation_section .selected_seats .row .col {
+  text-align: left;
+}
+
+.main_section .calculation_section .total_price,
+.main_section .calculation_section .grand_total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-top: 10px;
+}
+
+.main_section .calculation_section .coupon_input {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+.main_section .calculation_section .coupon_input input {
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+.main_section .calculation_section .coupon_input button {
+  margin-top: 0;
+}
+
+.main_section .calculation_section form {
+  /* border: 1px solid red; */
+}
+
+.main_section .calculation_section .input_group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.main_section .calculation_section label {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.main_section .calculation_section form input {
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+}
+
+.main_section .calculation_section button {
+  background: var(--primary);
+  border: none;
+  padding: 12px;
+
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  margin-top: 15px;
+}
+
+.main_section .calculation_section form button {
+  width: 100%;
+}
+
+.main_section .calculation_section footer {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-around;
+  text-decoration: underline;
+}
+
 @media only screen and (max-width: 950px) {
   main {
     padding: 0;
@@ -429,6 +645,19 @@ main .info_section .info .bus_info .info_three div {
     flex-direction: column;
     max-width: 500px;
     margin: auto;
+  }
+
+  .main_section {
+    flex-direction: column;
+  }
+
+  .main_section .bus_section {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .main_section .calculation_section {
+    padding-left: 0;
   }
 }
 
