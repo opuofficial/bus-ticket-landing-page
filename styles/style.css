@@ -609,6 +609,63 @@ main .info_section .info .bus_info .info_three div {
   display: flex;
   justify-content: space-around;
   text-decoration: underline;
+  background: transparent;
+}
+
+footer {
+  background: var(--text-dark);
+  color: white;
+  padding: 50px 0;
+}
+
+footer .container {
+  padding: 0 15px;
+}
+
+footer .info {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+footer .info h4 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+footer .info p {
+  color: lightgray;
+}
+
+footer .info p span {
+  display: block;
+}
+
+footer .info .app_link {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  display: flex;
+  padding: 5px 15px;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+footer .info .app_link h5 {
+  font-size: 1.2rem;
+}
+
+footer .copyright_section {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px dashed var(--text-lightgray);
+  padding-top: 30px;
+}
+
+footer .copyright_section small:nth-child(2) {
+  display: flex;
+  gap: 10px;
 }
 
 @media only screen and (max-width: 950px) {
@@ -658,6 +715,12 @@ main .info_section .info .bus_info .info_three div {
 
   .main_section .calculation_section {
     padding-left: 0;
+  }
+
+  footer .copyright_section {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
   }
 }
 
@@ -741,6 +804,15 @@ main .info_section .info .bus_info .info_three div {
 
   .banner_section small {
     width: 80%;
+  }
+
+  footer .info {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  footer .info .download_our_app {
+    margin-top: 20px;
   }
 }
 
