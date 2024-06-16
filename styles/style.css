@@ -668,6 +668,12 @@ footer .copyright_section small:nth-child(2) {
   gap: 10px;
 }
 
+@media only screen and (max-width: 400px) {
+  footer .info p span {
+    display: inline;
+  }
+}
+
 @media only screen and (max-width: 950px) {
   main {
     padding: 0;
