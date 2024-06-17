@@ -11,12 +11,17 @@ const totalPriceCalculationElem = document.getElementById("total_price");
 const grandTotalElem = document.querySelector(".grand_total");
 const grandTotalCalculationElem = document.getElementById("grand_total");
 const couponInputElem = document.querySelector(".coupon_input");
+const couponInput = document.querySelector(".coupon_input input");
+const couponApplyButton = document.querySelector(".coupon_input button");
 const nameInput = document.getElementById("name");
 const phoneInput = document.getElementById("phone");
 const nextButton = document.querySelector("form button");
 
 let selectedSeatsArray = [];
 let totalPrice = null;
+
+const COUPON_15 = "NEW15";
+const COUPON_20 = "Couple 20";
 
 barsIcon.addEventListener("click", () => {
   if (!menuIsOpen) {
@@ -67,8 +72,8 @@ const updateTotalPrice = () => {
   }
 };
 
-const updateGrandTotal = () => {
-  grandTotalCalculationElem.innerText = totalPrice;
+const updateGrandTotal = (grandTotal) => {
+  grandTotalCalculationElem.innerText = grandTotal || totalPrice;
 
   if (selectedSeatsArray.length) {
     grandTotalElem.classList.remove("hide");
@@ -149,3 +154,23 @@ const enableDisableNextButton = () => {
 
 nameInput.addEventListener("keyup", enableDisableNextButton);
 phoneInput.addEventListener("keyup", enableDisableNextButton);
+
+couponApplyButton.addEventListener("click", () => {
+  let discountPercentage;
+
+  if (couponInput.value == COUPON_15) {
+    discountPercentage = 15;
+  } else if (couponInput.value == COUPON_20) {
+    discountPercentage = 20;
+  }
+
+  calculateGrandTotal(totalPrice, discountPercentage);
+});
+
+const calculateGrandTotal = (totalPrice, discountPercentage) => {
+  let discount = (totalPrice * discountPercentage) / 100;
+  let grandTotal = totalPrice - discount;
+
+  updateGrandTotal(grandTotal);
+  couponInputElem.classList.add("hide");
+};
