@@ -68,9 +68,12 @@ const updateTotalPrice = () => {
 };
 
 const updateGrandTotal = () => {
+  grandTotalCalculationElem.innerText = totalPrice;
+
   if (selectedSeatsArray.length) {
-    grandTotalCalculationElem.innerText = totalPrice;
     grandTotalElem.classList.remove("hide");
+  } else {
+    grandTotalElem.classList.add("hide");
   }
 };
 
