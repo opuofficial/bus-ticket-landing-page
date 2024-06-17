@@ -603,6 +603,12 @@ main .info_section .info .bus_info .info_three div {
   width: 100%;
 }
 
+.main_section .calculation_section form button.disabled {
+  background: #f7f7f7;
+  cursor: auto;
+  color: #c0c0c0;
+}
+
 .main_section .calculation_section footer {
   margin-top: 20px;
   font-size: 0.8rem;
@@ -845,4 +851,13 @@ footer .copyright_section small:nth-child(2) {
   .banner_section small {
     width: 90%;
   }
+}
+
+.hide {
+  display: none !important;
+}
+
+.selected {
+  background: var(--primary) !important;
+  color: white !important;
 }

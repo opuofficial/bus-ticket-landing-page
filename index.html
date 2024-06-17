@@ -150,7 +150,7 @@
               </div>
               <div class="seats_left">
                 <img src="./images/seat-green.png" alt="" />
-                <span>40 Seats left</span>
+                <span><span id="seats_left">40</span> Seats left</span>
               </div>
             </div>
             <div class="bus_info">
@@ -280,13 +280,15 @@
             <div class="selected_seats_section">
               <div class="heading">
                 <div class="row">
-                  <div class="col">Seat <span>0</span></div>
+                  <div class="col">
+                    Seat <span id="selected_seats_count">0</span>
+                  </div>
                   <div class="col">Class</div>
                   <div class="col">Price</div>
                 </div>
               </div>
               <div class="selected_seats">
-                <div class="row">
+                <!-- <div class="row">
                   <div class="col">C1</div>
                   <div class="col">Economoy</div>
                   <div class="col">550</div>
@@ -295,35 +297,35 @@
                   <div class="col">C2</div>
                   <div class="col">Economoy</div>
                   <div class="col">550</div>
-                </div>
+                </div> -->
               </div>
-              <div class="total_price">
+              <div class="total_price hide">
                 <div>Total Price</div>
-                <div>BDT 1100</div>
+                <div>BDT <span id="total_price">0</span></div>
               </div>
-              <div class="coupon_input">
+              <div class="coupon_input hide">
                 <input type="text" placeholder="Have any coupon?" />
                 <button>Apply</button>
               </div>
-              <div class="grand_total">
+              <div class="grand_total hide">
                 <div>Grand Total</div>
-                <div>BDT 1100</div>
+                <div>BDT <span id="grand_total">0</span></div>
               </div>
             </div>
             <form>
               <div class="input_group">
                 <label for="name">Passenger Name*</label>
-                <input type="text" id="name" />
+                <input type="text" id="name" autocomplete="off" />
               </div>
               <div class="input_group">
                 <label for="phone">Phone Number*</label>
-                <input type="number" id="phone" />
+                <input type="number" id="phone" autocomplete="off" />
               </div>
               <div class="input_group">
                 <label for="email">Email ID</label>
-                <input type="email" id="email" />
+                <input type="email" id="email" autocomplete="off" />
               </div>
-              <button>Next</button>
+              <button class="disabled">Next</button>
               <footer>
                 <a href="#">Terms and Conditions</a>
                 <a href="#">Cancellation Policy</a>
