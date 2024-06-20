@@ -69,6 +69,8 @@ nav .bars_icon {
   cursor: pointer;
   padding: 10px 20px;
   font-size: 1.3rem;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
 nav button {
